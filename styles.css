@@ -194,7 +194,7 @@ header {
     background-color: red;
 }
 
-/* Mobile hamburger */
+/* Mobile hamburger - Hide on desktop, show on mobile */
 .mobile-menu-toggle {
     display: flex;
     flex-direction: column;
@@ -211,6 +211,18 @@ header {
     height: 2px;
     background: white;
     transition: 0.3s;
+}
+
+/* Hide hamburger on desktop - show menus by default */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .header-left,
+    .header-right {
+        display: flex !important;
+    }
 }
 
 /* ==========================================
